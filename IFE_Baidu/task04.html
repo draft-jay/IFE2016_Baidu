@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位和居中</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.position-center{
+				width: 400px;
+				height: 200px;
+				background-color: #ccc;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);	/*Or uses JS*/
+				overflow: hidden;
+			}
+			.spot{
+				width: 100px;
+				height:100px;
+				background-color: #fc0;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.spot-top{
+				left: -50px;
+				top: -50px;
+			}
+			.spot-bottom{
+				right: -50px;
+				bottom: -50px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="position-center">
+			<span class="spot spot-top"></span>
+			<span class="spot spot-bottom"></span>
+		</div>
+	</body>
+</html>
