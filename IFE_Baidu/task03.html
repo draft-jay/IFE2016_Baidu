@@ -6,31 +6,41 @@
 		<title>三栏式自适应布局（左右浮动自适应）</title>
 		<!--<link rel="stylesheet" type="text/css" href="css/task03.css" />-->
 		<style type="text/css">
-			*{
+			* {
 				margin: 0;
 			}
-			.clearfix:after{/*Enclosing float*/
+			
+			.clearfix:after {
+				/*Enclosing float*/
 				content: "langlang";
 				display: block;
 				height: 0;
 				visibility: hidden;
 				clear: both;
 			}
-			.clearfix{
-				zoom: 1;/*for IE 6/7 */
+			
+			.clearfix {
+				zoom: 1;
+				/*for IE 6/7 */
 			}
 			
-			.left,.center-article,.right,.container{
+			.left,
+			.center-article,
+			.right,
+			.container {
 				border: 1px solid #999;
 				padding: 20px;
-				box-sizing: border-box;/*以边框计算长宽*/
+				box-sizing: border-box;
+				/*以边框计算*/
 				background-color: #fff;
 			}
-			.center-article{
-				margin: 0 140px 0 220px;/*because of box-sizing*/
+			
+			.center-article {
+				margin: 0 140px 0 220px;
+				/*because of box-sizing*/
 				border: 1px solid #999;
 			}
-
+			
 			.container {
 				background-color: #eee;
 			}
@@ -40,13 +50,14 @@
 				width: 200px;
 			}
 			
-			.left .img-logo{
+			.left .img-logo {
 				float: left;
 				display: block;
 				width: 80px;
 				height: 80px;
 			}
-			.left .text-logo{
+			
+			.left .text-logo {
 				/*overflow: hidden;*/
 			}
 			
@@ -54,20 +65,24 @@
 				width: 120px;
 				float: right;
 			}
-			.right .right-photo{
+			
+			.right .right-photo {
 				width: 80px;
 				height: 80px;
 				overflow: hidden;
 			}
-			.right ul{
+			
+			.right ul {
 				list-style: none;
 				padding: 0;
 				margin: 0;
 			}
-			.right ul>li{
+			
+			.right ul>li {
 				margin-bottom: 20px;
 			}
-			.right ul>li:last-child{
+			
+			.right ul>li:last-child {
 				margin-bottom: 0;
 			}
 		</style>
@@ -79,35 +94,35 @@
 				<img class="img-logo" src="img/logo.jpg" />
 				<span class="text-logo">前端狗狗狗</span>
 			</div>
-			
+
 			<div class="right">
 				<ul>
-					<li><img class="right-photo" src="img/logo.jpg"/></li>
-					<li><img class="right-photo" src="img/logo.jpg"/></li>
-					<li><img class="right-photo" src="img/logo.jpg"/></li>
-					<li><img class="right-photo" src="img/logo.jpg"/></li>
+					<li><img class="right-photo" src="img/logo.jpg" /></li>
+					<li><img class="right-photo" src="img/logo.jpg" /></li>
+					<li><img class="right-photo" src="img/logo.jpg" /></li>
+					<li><img class="right-photo" src="img/logo.jpg" /></li>
 				</ul>
 			</div>
 
 			<div class="center-article">
 				<article>
-				<h1>三栏式自适应布局（左右浮动中间自适应）</h1>
-				<h3>重要说明</h3>
-				<p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。 我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。
-				</p>
-				<p>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。 因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。 那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。 有的时候，实现题目的要求很简单，甚至参考资料里就有，但是背后的思考和亲手去实践却是任务最关键的一部分。 在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。
-				</p>
-				<h3>任务目标</h3>
-				<ol>
-					<li>掌握HTML/CSS布局的概念</li>
-					<li>掌握盒模型的概念</li>
-					<li>掌握position与float的概念以及在布局时的用法</li>
-				</ol>
+					<h1>三栏式自适应布局（左右浮动中间自适应）</h1>
+					<h3>重要说明</h3>
+					<p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。 我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。
+					</p>
+					<p>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。 因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。 那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。 有的时候，实现题目的要求很简单，甚至参考资料里就有，但是背后的思考和亲手去实践却是任务最关键的一部分。 在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。
+					</p>
+					<h3>任务目标</h3>
+					<ol>
+						<li>掌握HTML/CSS布局的概念</li>
+						<li>掌握盒模型的概念</li>
+						<li>掌握position与float的概念以及在布局时的用法</li>
+					</ol>
 
-				<h3>任务描述</h3>
-				
-				<p>使用 HTML 与 CSS 按照 示例图（点击查看） 实现三栏式布局。 左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。 背景色为 #eee 区域的高度取决于三个子元素中最高的高度。
-				</p>
+					<h3>任务描述</h3>
+
+					<p>使用 HTML 与 CSS 按照 示例图（点击查看） 实现三栏式布局。 左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。 背景色为 #eee 区域的高度取决于三个子元素中最高的高度。
+					</p>
 				</article>
 			</div>
 		</div>
