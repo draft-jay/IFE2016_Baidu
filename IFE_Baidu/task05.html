@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>HTML+CSS基础：完整页面</title>
+		<meta name="description" content="不兼容IE，仅以chrome最新版测试" />
 		<link rel="stylesheet" type="text/css" href="css/task05.css" />
 	</head>
 
@@ -32,7 +33,7 @@
 						<tr>
 							<td></td>
 							<td>
-								邮箱地址请按要求格式输入
+								<span>邮箱地址请按要求格式输入</span>
 							</td>
 						</tr>
 						<tr>
@@ -46,11 +47,11 @@
 						<tr>
 							<td></td>
 							<td>
-								密码为6-16位英文数字
+								<span>密码为6-16位英文数字</span>
 							</td>
 						</tr>
 						<tr>
-							<td><label>性别</label></td>
+							<td>性别</td>
 							<td><input type="radio" name="gender" id="male" /><label for="male">男</label>
 								<input type="radio" name="gender" id="female" /><label for="female">女</label></td>
 						</tr>
@@ -70,7 +71,7 @@
 						</tr>
 						<tr>
 							<td>个人描述</td>
-							<td><textarea name="profile" rows="" cols=""></textarea></td>
+							<td><textarea name="profile"></textarea></td>
 						</tr>
 					</table>
 					<input type="submit" value="确认提交" />
@@ -79,14 +80,14 @@
 
 			<section class="content">
 				<article>
-					<div class="article-header">
+					<header>
 						<h2>文章一级标题</h2>
 						<h3>文章二级标题</h3>
 						<span class="author">
 							浪浪 2016-03-24
 						</span>
 						<!--未来需要接收来自后台的数据-->
-					</div>
+					</header>
 					<p>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是一个，换行了<br> 这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长，换行了
 						<br> 这是以一个很长很长的段落。这是以一个很长很长的段落，这是以一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落。</p>
 					<img src="img/logo.jpg" />
@@ -95,14 +96,14 @@
 				</article>
 
 				<article>
-					<div class="article-header">
+					<header>
 						<h2>另一篇文章一级标题</h2>
 						<h3>文章二级标题</h3>
 						<span class="author">
 							浪浪 2016-03-24
 						</span>
 						<!--未来需要接收来自后台的数据-->
-					</div>
+					</header>
 					<p>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是一个，换行了<br> 这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长，换行了
 						<br> 这是以一个很长很长的段落。这是以一个很长很长的段落，这是以一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落。</p>
 					<img src="img/logo.jpg" />
@@ -115,23 +116,60 @@
 
 				<article>
 					<h2>图片</h2>
-					<ol>
-						<li>排名1</li>
-						<li>排名2</li>
-						<li>排名3</li>
-					</ol>
-					<img src="img/logo.jpg" />
+					<section >
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+					</section>
+
 				</article>
 
 				<article>
-					<div class="article-header">
+					<header>
 						<h2>最后一篇文章一级标题</h2>
 						<h3>文章二级标题</h3>
 						<span class="author">
 							浪浪 2016-03-24
 						</span>
 						<!--未来需要接收来自后台的数据-->
-					</div>
+					</header>
 					<ol>
 						<li>排名1</li>
 						<li>排名2</li>

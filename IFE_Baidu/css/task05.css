@@ -83,12 +83,30 @@ article {
 	margin-bottom: 20px;
 }
 
-article h3, .author {
+article header h3, .author {
 	color: #666;
 }
 
 article p {
 	text-indent: 2em;
+}
+
+.img-string{
+}
+
+article figure{
+	/*float: left;*/
+	text-align: center;
+	border: 1px solid #000;
+	height: 100px;
+	width: 100px;
+	margin: 10px;/*这里相邻的margin叠加了，搞不懂就减一半margin吧*/
+	padding: 10px;
+	display: inline-block;
+}
+article figure img{
+	height: 70px;
+	width: 100px;
 }
 
 .aside {
@@ -98,10 +116,24 @@ article p {
 	background-color: #fff;
 	box-sizing: border-box;
 }
-.aside-table tr+td{
+.aside-table,.aside-table textarea{
+	width: 100%;
+}
+.aside-table td:first-of-type{
 	text-align: right;
+	padding-right: 10px;
 }
 
+.aside span{
+	font-size: 80%;
+	color: #666;
+}
+.aside-table textarea{
+	resize: none;
+	overflow: scroll;
+	padding: 0;
+	height: 100px;
+}
 footer {
 	background-color: #000;
 	color: #FFF;

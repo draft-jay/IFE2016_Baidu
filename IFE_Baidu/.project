@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>IFE_Baidu</name>
+	<name>IFE_Baidu_stage_1</name>
 	<comment>Create By HBuilder</comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1458310375010</id>
+			<id>0</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
