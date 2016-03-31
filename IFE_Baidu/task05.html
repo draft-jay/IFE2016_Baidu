@@ -4,98 +4,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>HTML+CSS基础：完整页面</title>
-		<style type="text/css">
-			body {
-				background-color: #ddd;
-				margin: 0;
-				padding: 0;
-			}
-			.clearfix{
-				overflow: auto;
-				/*zoom: 1;*/		/*for IE*/
-			}
-			.top-header {
-				background-color: #000;
-				width: 100%;
-			}
-			
-			.top-header img {
-				position: absolute;
-				top: 10px;
-				left: 20px;
-				width: 50px;
-				height: 50px;
-			}
-			
-			nav {
-				float: right;
-				height: 70px;
-			}
-			
-			nav ul {
-				list-style-type: none;
-				padding: 0;
-				margin: 0;
-			}
-			/*实现字体垂直居中*/
-			nav ul li {
-				float: left;
-				line-height: 70px;
-			}
-			
-			nav ul li a {
-				display: block;
-				width: 100px;
-				height: 40px;
-				color: #fff;
-				text-decoration: none;
-			}
-			nav a:hover{
-				color: grey;
-			}
-			/*－－－－－main content－－－－－－－*/
-			.container-content{
-			}
-			.aside,article{
-				box-shadow: 2px 2px 2px 1px #666;
-				padding: 20px;
-			}
-			article:hover,.aside:hover{
-				box-shadow: 0 0 2px 2px #00BFFF;
-			}
-			.content{
-				margin: 20px 420px 0px 5px;
-			}
-			
-			article{
-				background-color: #fff;
-				margin-bottom: 20px;
-			}
-			article h3{
-				
-			}
-			article p{
-				text-indent: 2em;
-			}
-			
-			.aside{
-				float: right;
-				margin: 20px;
-				width: 380px;
-				background-color: #fff;
-				box-sizing: border-box;
-			}
-			
-			footer{
-				background-color: #000;
-				color: #FFF;
-				width: 100%;
-				height: 60px;
-				line-height: 60px;
-				text-align: center;
-				
-			}
-		</style>
+		<meta name="description" content="不兼容IE，仅以chrome最新版测试" />
+		<link rel="stylesheet" type="text/css" href="css/task05.css" />
 	</head>
 
 	<body>
@@ -110,41 +20,90 @@
 				</ul>
 			</nav>
 		</header>
-		
-		<section class="container-content clearfix">
+
+		<section class="clearfix">
 			<aside class="aside">
 				<h3>这里是个侧栏</h3>
 				<form action="" method="post">
-					<input type="submit" value=""/>
+					<table class="aside-table">
+						<tr>
+							<td><label for="email">请输入邮箱地址</label></td>
+							<td><input type="email" name="email" id="eamil" value="" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>邮箱地址请按要求格式输入</span>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="password">请输入密码</label></td>
+							<td><input type="password" name="password" id="password" /></td>
+						</tr>
+						<tr>
+							<td><label for="password-r">请重新输入密码</label></td>
+							<td><input type="password" name="passwordR" id="password-r" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<span>密码为6-16位英文数字</span>
+							</td>
+						</tr>
+						<tr>
+							<td>性别</td>
+							<td><input type="radio" name="gender" id="male" /><label for="male">男</label>
+								<input type="radio" name="gender" id="female" /><label for="female">女</label></td>
+						</tr>
+						<tr>
+							<td><label for="city">城市</label></td>
+							<td><select name="city" id="city">
+						<option value="北京" selected="selected">北京</option>
+						<option value="上海">上海</option>
+						<option value="广州">广州</option>
+					</select></td>
+						</tr>
+						<tr>
+							<td>爱好</td>
+							<td><input type="checkbox" name="favor-sport" id="favor-sport" value="" /><label for="favor">运动</label>
+								<input type="checkbox" name="favor-art" id="favor-art" value="" /><label for="favor">艺术</label>
+								<input type="checkbox" name="favor-science" id="favor-science" value="" /><label for="favor">科学</label></td>
+						</tr>
+						<tr>
+							<td>个人描述</td>
+							<td><textarea name="profile"></textarea></td>
+						</tr>
+					</table>
+					<input type="submit" value="确认提交" />
 				</form>
 			</aside>
-			
+
 			<section class="content">
 				<article>
-					<div class="article-header">
+					<header>
 						<h2>文章一级标题</h2>
 						<h3>文章二级标题</h3>
-						<span id="">
+						<span class="author">
 							浪浪 2016-03-24
 						</span>
 						<!--未来需要接收来自后台的数据-->
-					</div>
+					</header>
 					<p>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是一个，换行了<br> 这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长，换行了
 						<br> 这是以一个很长很长的段落。这是以一个很长很长的段落，这是以一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落。</p>
 					<img src="img/logo.jpg" />
 					<p>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是一个，换行了<br> 这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长，换行了
 						<br> 这是以一个很长很长的段落。这是以一个很长很长的段落，这是以一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落。</p>
 				</article>
-				
+
 				<article>
-					<div class="article-header">
+					<header>
 						<h2>另一篇文章一级标题</h2>
 						<h3>文章二级标题</h3>
-						<span id="">
+						<span class="author">
 							浪浪 2016-03-24
 						</span>
 						<!--未来需要接收来自后台的数据-->
-					</div>
+					</header>
 					<p>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是一个，换行了<br> 这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长，换行了
 						<br> 这是以一个很长很长的段落。这是以一个很长很长的段落，这是以一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落，这是以一个很长很长的段落。</p>
 					<img src="img/logo.jpg" />
@@ -154,45 +113,105 @@
 						<li>项目列表三</li>
 					</ul>
 				</article>
-				
+
 				<article>
 					<h2>图片</h2>
-					<ol>
-						<li>排名1</li>
-						<li>排名2</li>
-						<li>排名3</li>
-					</ol>
-					<img src="img/logo.jpg" />
+					<section >
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+						<figure>
+							<img src="img/pic.jpg" />
+							<figcaption>好看的图片</figcaption>
+						</figure>
+					</section>
+
 				</article>
-				
+
 				<article>
-					<div class="article-header">
+					<header>
 						<h2>最后一篇文章一级标题</h2>
 						<h3>文章二级标题</h3>
-						<span id="">
+						<span class="author">
 							浪浪 2016-03-24
 						</span>
 						<!--未来需要接收来自后台的数据-->
-					</div>
+					</header>
 					<ol>
 						<li>排名1</li>
 						<li>排名2</li>
 						<li>排名3</li>
 					</ol>
-					<table border="" cellspacing="" cellpadding="">
-						<tr><th>表头</th><th>表头</th></tr>
-						<tr><td>Data</td></tr>
+					<table border="1" class="article-table">
+						<thead>
+							<tr>
+								<th>表头</th>
+								<th>表头</th>
+								<th>表头</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>表内容单元格</td>
+								<td>表内容单元格</td>
+								<td><a href="">操作</a></td>
+							</tr>
+							<tr>
+								<td>表内容单元格</td>
+								<td>表内容单元格</td>
+								<td><a href="">操作</a></td>
+							</tr>
+							<tr>
+								<td>表内容单元格</td>
+								<td>表内容单元格</td>
+								<td><a href="">操作</a></td>
+							</tr>
+							<tr>
+								<td>总计</td>
+								<td colspan="2">1000</td>
+							</tr>
+						</tbody>
 					</table>
 				</article>
-				
+
 			</section>
 
-			
 		</section>
-		
-		<footer>
-			版权所有&copy;by langlang
-		</footer>
+
+		<footer>版权所有&copy;by langlang</footer>
 	</body>
 
 </html>
