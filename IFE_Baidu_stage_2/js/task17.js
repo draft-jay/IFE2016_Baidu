@@ -54,19 +54,44 @@ var pageState = {
 
 /**
  * 渲染图表
+ * Todo:样式、行为分离，chartBar设置改为增加css类名
  */
 function renderChart() {
 	var chartWrap = document.getElementById("aqi-chart-wrap");
-	var count = 1;//匹配当前选择的第count个option（从1开始）
-	console.log("chatWrap:"+chartWrap);
-	if(pageState.nowSelectCity === -1 || pageState.nowSelectCity === 0){
+	var count = 1; //匹配当前选择的第count个option（从1开始）
+	var color = 555555; //or	var color = randomColor();
+	chartWrap.innerHTML = "";
+
+	console.log("chratWrap:" + chartWrap);
+	if (pageState.nowSelectCity === -1 || pageState.nowSelectCity === 0) {
 		alert("选择城市");
 		return false;
 	}
-	for(var cur in chartData){
-		if(count === pageState.nowSelectCity){
-			
-		} //判断是否是第0个option
+
+	for (var city in chartData) { //get all of city data
+		if (count === pageState.nowSelectCity) { //certen city
+			var dat = chartData[city][pageState.nowGraTime]; //get special data of date type 
+			for (var x in dat) {
+				var div = document.createElement("div");
+				div.setAttribute("class", "chart-bar");
+				div.style.height = (dat[x]) + "px";
+				div.style.backgroundColor = "#" + color;
+				div.title = dat[x];
+//				console.log(div);
+				if (pageState.nowGraTime === "day") {
+					div.style.width = "10px";
+				}
+				if (pageState.nowGraTime === "week") {
+					div.style.width = "30px";
+				}
+				if (pageState.nowGraTime === "month") {
+					div.style.width = "50px";
+				}
+
+				chartWrap.appendChild(div);
+				color += 300;
+			}
+		}
 		count += 1;
 	}
 }
@@ -79,12 +104,12 @@ function renderChart() {
  */
 function graTimeChange(e) {
 	// 确定是否选项发生了变化 
-	if(e.target.value === pageState.nowGraTime){
-		return ;
+	if (e.target.value === pageState.nowGraTime) {
+		return;
 	}
 	// 设置对应数据
 	pageState.nowGraTime = e.target.value;
-	console.log("graTime:"+e.target.value);
+	console.log("graTime:" + e.target.value);
 	// 调用图表渲染函数
 	renderChart();
 }
@@ -97,10 +122,10 @@ function graTimeChange(e) {
 function citySelectChange(e) {
 	// 确定是否选项发生了变化 
 	//this[this.selectedIndex].value
-	console.log("selected index:"+e.target.selectedIndex);
-	console.log("selected event index:"+ this.selectedIndex);
-	if( this.selectedIndex === pageState.nowSelectCity){
-		return ;
+	console.log("selected index:" + e.target.selectedIndex);
+	console.log("selected event index:" + this.selectedIndex);
+	if (this.selectedIndex === pageState.nowSelectCity) {
+		return;
 	}
 	// 设置对应数据
 	pageState.nowSelectCity = this.selectedIndex;
@@ -113,8 +138,8 @@ function citySelectChange(e) {
  */
 function initGraTimeForm() {
 	var graTime = document.getElementById("form-gra-time");
-//	var clickedRadio = graTime.getElementsByTagName("input");
-	graTime.addEventListener("click",graTimeChange,false);
+	//	var clickedRadio = graTime.getElementsByTagName("input");
+	graTime.addEventListener("click", graTimeChange, false);
 }
 
 /**
@@ -123,17 +148,17 @@ function initGraTimeForm() {
 function initCitySelector() {
 	// 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
 	var citySelect = document.getElementById("city-select");
-	for(var city in aqiSourceData){
+	for (var city in aqiSourceData) {
 		var opt = document.createElement("option");
 		opt.innerHTML = city;
-		citySelect.appendChild(opt); 
+		citySelect.appendChild(opt);
 		//or 
 		//html += "<option>"+city+"</option>";
 		//citySelect.innerHTML = html;
 		console.log(city);
 	}
 	// 给select设置事件，当选项发生变化时调用函数citySelectChange
-	citySelect.addEventListener("change",citySelectChange,false);
+	citySelect.addEventListener("change", citySelectChange, false);
 }
 
 /**
@@ -158,29 +183,39 @@ function initCitySelector() {
  */
 function initAqiChartData() {
 	// 将原始的源数据处理成图表需要的数据格式
+	var n = weekNum = sum = 0;
 	for (var cur in aqiSourceData) {
 		chartData[cur] = {
 			day: {},
 			week: {},
 			month: {}
 		};
-		var n = weekNum = sum = 0;
-		chartData[cur]["day"] = aqiSourceData[cur];
-		for (var dat in aqiSourceData[cur]) {
-			n +=1;
-			sum += aqiSourceData[cur][dat];
-//			console.log();
+		chartData[cur]["day"] = aqiSourceData[cur]; //get all of original data and transfer to data of "day"
+
+		for (var x in aqiSourceData[cur]) { //transfer to data of "week"
+			n += 1;
+			sum += aqiSourceData[cur][x];
+			//console.log();
 			if (n % 7 === 0) {
 				weekNum += 1;
 				chartData[cur]["week"][weekNum] = parseInt(sum / 7);
 				sum = 0;
-			} else{
-				chartData[cur]["week"][weekNum] = parseInt(sum / (n%7));
+			} else {
+				chartData[cur]["week"][weekNum] = parseInt(sum / (n % 7));
 				sum = 0;
 			}
 		}
+		//筋疲力尽，做不动了，月数据复制来的
+		sum = 0;
+		for (var i = 1; i <= 12; i++) {
+			for (var j = 1; j <= 31; j++) {
+				if (aqiSourceData[cur]["2016-" + [((i + '').length == 1) ? ("0" + i) : i] + "-" + [(('' + j).length == 1) ? ("0" + j) : j]]) {
+					sum += aqiSourceData[cur]["2016-" + [((i + '').length == 1) ? ("0" + i) : i] + "-" + [(('' + j).length == 1) ? ("0" + j) : j]];
+					chartData[cur]["month"][i] = parseInt(sum / j);
+				}
+			}
+		}
 	}
-
 }
 
 /**

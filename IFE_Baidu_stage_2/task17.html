@@ -3,7 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>IFE JavaScript Task 17</title>
-    
+    <style type="text/css">
+    .aqi-chart-wrap{
+    		margin: 0 auto;
+    		border: solid 1px #000;
+    		width: 1100px;
+    }
+    	.chart-bar{
+    		display: inline-block;
+    		margin-left: 1px;
+    	}
+    </style>
   </head>
 <body>
   <fieldset id="form-gra-time">
@@ -20,7 +30,7 @@
     </select>
   </fieldset>
 
-  <div class="aqi-chart-wrap">
+  <div class="aqi-chart-wrap" id="aqi-chart-wrap">
   </div>
   <script src="js/task17.js"></script>
 </body>
