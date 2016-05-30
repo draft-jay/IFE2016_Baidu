@@ -86,7 +86,7 @@ nav ul li:last-child a{
 
 .banner-top {
 	height: 690px;
-	background-image: url(../img/task07/banner_bg.png);
+	background-image: url(../../img/task07/banner_bg.png);
 }
 
 .mask {
@@ -169,7 +169,7 @@ nav ul li:last-child a{
 
 .city {
 	height: 340px;
-	background-image: url(../img/task07/city_bg.png);
+	background-image: url(../../img/task07/city_bg.png);
 }
 .city .mask{
 	display: block;
@@ -195,7 +195,7 @@ nav ul li:last-child a{
 .city form select{
 	padding: 0 15px;
 	color: #aba6a5;
-	background: #fff url(../img/task07/select-bg.png) no-repeat right 10px center;
+	background: #fff url(../../img/task07/select-bg.png) no-repeat right 10px center;
 }
 
 .city form input{
@@ -226,7 +226,7 @@ nav ul li:last-child a{
 }
 
 .news .news_1 .image {
-	background-image: url(../img/task07/section_5_1.png);
+	background-image: url(../../img/task07/section_5_1.png);
 	height: 100%;
 	width: 850px;
 	float: left;
@@ -309,7 +309,7 @@ nav ul li:last-child a{
 }
 
 .news .news_2 .cell:last-of-type {
-	background-image: url(../img/task07/section_5_2.png);
+	background-image: url(../../img/task07/section_5_2.png);
 	float: right;
 }
 
@@ -356,7 +356,7 @@ nav ul li:last-child a{
 	color: #aba6a5;
 	float: right;
 	display: block;
-	background: url(../img/task07/volunteer_more.png) no-repeat left center;
+	background: url(../../img/task07/volunteer_more.png) no-repeat left center;
 }
 
 .volunteer .content form {
