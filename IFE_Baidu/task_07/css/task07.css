@@ -130,7 +130,7 @@ nav ul li:last-child a{
 	height: 250px;
 	display: flex;/*for float*/
 }
-
+/*flex to ul*/
 .banner-middle div {
 	width: 25%;
 	height: 250px;
@@ -215,10 +215,43 @@ nav ul li:last-child a{
 	margin: 5px auto 10px auto;
 }
 
-.events {
+.events{
 	height: 500px;
-	background-color: #EDEDEC;
-	
+	width: 100%;
+	background-color: #f7f7f7;
+}
+
+.events .fig-wrap{
+	padding: 50px 0;
+	margin: 0 auto;
+	width: 1048px;
+}
+
+.events .fig-wrap figure{
+	display: inline-block;
+	width: 220px;
+	height: 380px;
+	margin-left: 37px;
+	text-align: center;
+}
+
+.events .fig-wrap figure a{
+	display: block;
+	border: 1px solid #dadada;
+	background-color: #fff;
+	padding: 13px 8px;
+}
+
+.events .fig-wrap figure a:hover{
+	box-shadow: 0 0 2px 2px #00BFFF;
+}
+.events .fig-wrap figure h5{
+	font-size: 14px;
+	margin-top: 12px;
+}
+.events .fig-wrap figure h6{
+	margin-top: 12px;
+	color:#9f9f9f;
 }
 
 .news .news_1 {

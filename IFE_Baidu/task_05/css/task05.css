@@ -100,7 +100,7 @@ article figure{
 	border: 1px solid #000;
 	height: 100px;
 	width: 100px;
-	margin: 10px;/*这里相邻的margin叠加了，搞不懂就减一半margin吧*/
+	margin: 10px;/*这里相邻的margin叠加了，就减一半margin吧*/
 	padding: 10px;
 	display: inline-block;
 }
