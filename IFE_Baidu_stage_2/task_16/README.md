@@ -1,4 +1,4 @@
-[**task 16 Demo**](https://github.com/draft-jay/draft-jay.github.io/tree/master/IFE_Baidu_stage_2/task_16/index.html)
+[**task 16 Demo**](https://draft-jay.github.io/IFE_Baidu_stage_2/task_16/index.html)
 
 # 任务十六：零基础JavaScript编码（四）
 

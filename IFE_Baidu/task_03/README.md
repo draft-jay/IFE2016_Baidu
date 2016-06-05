@@ -1,4 +1,4 @@
-[**task 03 Demo**](https://github.com/draft-jay/draft-jay.github.io/tree/master/IFE_Baidu/task_03/index.html)
+[**task 03 Demo**](https://draft-jay.github.io/IFE_Baidu/task_03/index.html)
 
 # 任务三：三栏式布局
 

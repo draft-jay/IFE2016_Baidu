@@ -1,4 +1,4 @@
-[**task 05 Demo**](https://github.com/draft-jay/draft-jay.github.io/tree/master/IFE_Baidu/task_05/index.html)
+[**task 05 Demo**](https://draft-jay.github.io/IFE_Baidu/task_05/index.html)
 
 # 任务五：零基础HTML及CSS编码（二）
 

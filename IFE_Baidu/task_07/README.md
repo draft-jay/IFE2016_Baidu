@@ -1,4 +1,4 @@
-[**task07 Demo**](https://github.com/draft-jay/draft-jay.github.io/tree/master/IFE_Baidu/task_07/index.html)
+[**task07 Demo**](https://draft-jay.github.io/IFE_Baidu/task_07/index.html)
 
 # 任务七：实现常见的技术产品官网的页面架构及样式布局
 

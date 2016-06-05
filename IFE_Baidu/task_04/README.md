@@ -1,4 +1,4 @@
-[**task 04 Demo**](https://github.com/draft-jay/draft-jay.github.io/tree/master/IFE_Baidu/task_04/index.html)
+[**task 04 Demo**](https://draft-jay.github.io/IFE_Baidu/task_04/index.html)
 
 # 任务四：定位和居中问题
 
