@@ -1,3 +1,5 @@
+[**task 14 Demo**](https://github.com/draft-jay/draft-jay.github.io/tree/master/IFE_Baidu_stage_2/task_14/index.html)
+
 # 任务十四：零基础JavaScript编码（二）
 
 ## 任务目的
