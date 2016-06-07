@@ -1,10 +1,10 @@
 /*因为页面有最小宽度，所以可以设定容器宽高，不必强调内容撑开*/
-
+/*清除浏览器默认padding,margin*/
 * {
 	padding: 0;
 	margin: 0;
 }
-
+/*可拓展成兼容的.clearfix:after*/
 .clearfix {
 	overflow: auto;
 }
